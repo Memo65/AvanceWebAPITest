@@ -10,15 +10,15 @@ Es necesario que la base de datos se mantenga con el nombnre establecido `UserMa
 
 ## Backend
 
-Para poder iniciar el backend en .NET es necesario abrir el proyecto, ya sea desde la aplicación de Visual Studio buscando el archivo de solución o abrir el archivo `WebAPITest.sln` que se encuentra al mismo nivel de la carpeta con el mismo nombre (sin incluir la extensión)
+Para poder iniciar el backend en .NET es necesario abrir el proyecto, ya sea desde el explorador de archivos de Visual Studio o abrir el archivo `WebAPITest.sln` que se encuentra al mismo nivel de la carpeta con el mismo nombre (WebAPITest)
 
-Una vez abierto el proyecto, dar clic sobre la tecla "F5", con eso se abrirá una ventana de Swagger, lo que permite la ejecución básica de los endpoints
+Una vez abierto el proyecto, presionar la tecla "F5", con eso se abrirá una ventana de Swagger, lo que permite la ejecución básica de los endpoints
 
 ## Frontend
 
-Antes de ejecutar la solución de Angular, se debe verificar en qué puerto se encuentra corriendo el backend, ya que no se configuró dicho puerto, una vez identificada la información, ir a la siguiente ruta: `src/app/Settings/appSettings.ts`, dentro de este archivo de configuración modificar el puerto de la URL para que Angular identifique correctamente la dirección de la cual extraerá y manipulará información de los endpoints
+Antes de ejecutar la solución de Angular, se debe verificar en qué puerto se encuentra corriendo el backend, ya que no se configuró dicho puerto de manera fija, una vez identificada la información, ir a la siguiente ruta: `src/app/Settings/appSettings.ts`, dentro de este archivo de configuración modificar el puerto de la URL para que Angular identifique correctamente la dirección de la cual extraerá y manipulará información de los endpoints
 
-abrir la carpeta donde se encuentra el proyecto de Angular, al nivel de las carpetas `public` y `src`, ejecutar el comando `npm install` para instalar todas las dependencias de Angular
+Abrir la carpeta donde se encuentra el proyecto de Angular, al nivel de las carpetas `public` y `src`, abrir una ventana de simbolo de sistema (consola, CMD, etc) y ejecutar el comando `npm install` para instalar todas las dependencias de Angular.
 
 Sin cerrar la consola dentro del proyecto de angular, ejecutar el comando `ng serve --open`
 
