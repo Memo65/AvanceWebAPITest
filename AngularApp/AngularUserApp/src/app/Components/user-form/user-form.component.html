@@ -1,0 +1,45 @@
+<mat-card appearance="outlined" style="width: 30%; padding: 30px; margin: 50px auto; display: flex; justify-content: center;">
+  <mat-card-content>
+    <div class="mat-elevation-z2" >
+  
+    <form [formGroup]="userForm">
+        <div class="flex">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nombre de usuario</mat-label>
+                <input matInput formControlName="username">
+            </mat-form-field>
+        </div>
+
+
+        <div class="flex">
+          <mat-form-field class="example-full-width">
+              <mat-label>Contraseña</mat-label>
+              <input matInput formControlName="passwordHash">
+          </mat-form-field>
+      </div>
+        
+        <div class="flex">
+            <mat-form-field>
+                <mat-label>Correo</mat-label>
+                <input
+                  matInput
+                  placeholder="persona@ejemplo.com"
+                  (blur)="updateErrorMessage()"
+                  required
+                  formControlName="email"
+                />
+                @if (email.invalid) {
+                  <mat-error>{{errorMessage()}}</mat-error>
+                }
+            </mat-form-field>
+        </div>
+
+        <div class="flex">
+          <button mat-flat-button color="primary" (click)="saveUser()">Guardar</button>
+          <button mat-flat-button color="warn" (click)="home()" style="margin-left: 8px;">Volver</button>
+      </div>
+    </form>
+  
+    </div>
+  </mat-card-content>
+</mat-card>
